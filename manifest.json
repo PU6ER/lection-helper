@@ -1,0 +1,31 @@
+{
+	"manifest_version": 3,
+	"name": "Lecture Helper - Attendance Monitor",
+	"version": "1.0.0",
+	"description": "Automatically clicks attendance button during online lectures on my.mts-link.ru",
+	"permissions": [
+		"activeTab",
+		"tabs",
+		"background",
+		"scripting",
+		"notifications"
+	],
+	"host_permissions": ["https://my.mts-link.ru/*"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://my.mts-link.ru/*"],
+			"js": ["content.js"],
+			"run_at": "document_idle"
+		}
+	],
+	"action": {
+		"default_popup": "popup.html",
+		"default_title": "Lecture Helper Settings"
+	},
+	"icons": {
+		"128": "icons/icon128.png"
+	}
+}

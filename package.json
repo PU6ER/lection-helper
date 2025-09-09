@@ -1,0 +1,20 @@
+{
+  "name": "lecture-helper",
+  "version": "1.0.0",
+  "description": "Chrome extension that automatically clicks attendance buttons during online lectures on my.mts-link.ru",
+  "main": "background.js",
+  "scripts": {
+    "build": "echo 'Chrome extension ready for loading'",
+    "package": "zip -r lecture-helper.zip . -x '*.git*' 'node_modules/*' '*.DS_Store'",
+    "dev": "echo 'Load the extension in Chrome by going to chrome://extensions/ and clicking Load unpacked'"
+  },
+  "keywords": [
+    "chrome-extension",
+    "attendance",
+    "lecture",
+    "automation",
+    "my.mts-link.ru"
+  ],
+  "author": "Lecture Helper",
+  "license": "MIT"
+}
